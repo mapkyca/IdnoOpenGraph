@@ -1,0 +1,3 @@
+[submodule "external/php-ogp"]
+	path = external/php-ogp
+	url = https://github.com/mapkyca/php-ogp.git
