@@ -8,7 +8,7 @@
 	];
 
 // If this is an object, override with specifics
-if (\Idno\Core\site()->currentPage()->isPermalink()) {
+if (\Idno\Core\site()->currentPage() && \Idno\Core\site()->currentPage()->isPermalink()) {
 	
 	$owner = $vars['object']->getOwner();
 	
