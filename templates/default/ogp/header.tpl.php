@@ -24,8 +24,8 @@ if (\Idno\Core\site()->currentPage() && \Idno\Core\site()->currentPage()->isPerm
 ?>
 <!-- Idno OpenGraph by Marcus Povey -->
 <?php
-foreach ($headers as $key => $value) {
-	echo "<meta property=\"$key\" content=\"$value\" />\n";
-}
+//foreach ($headers as $key => $value) {
+//	echo "<meta property=\"$key\" content=\"$value\" />\n";
+//}
 ?>
 <!-- End OpenGraph -->
