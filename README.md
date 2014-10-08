@@ -9,7 +9,7 @@ Installation
 ------------
 
 * Extract into the IdnoOpenGraph folder into the IndoPlugins folder of your idno installation, being sure to check out
-  the dependancies.
+  the dependancies (i.e. ```git clone --recursive```).
 * Log into idno and click on Administration.
 * Click "install".
 
