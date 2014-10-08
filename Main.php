@@ -48,7 +48,7 @@
             function registerPages() {
 
 					// Open graph headers for site
-					\Idno\Core\site()->template()->extendTemplate('shell/head','ogp/header');
+					//\Idno\Core\site()->template()->extendTemplate('shell/head','ogp/header');
 					
 					 // Add custom CSS
 					\Idno\Core\site()->template()->extendTemplate('shell/head','ogp/css');
