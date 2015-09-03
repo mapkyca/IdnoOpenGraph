@@ -13,12 +13,12 @@
 				    if (!is_array($img)) $img = [$img];
 				    
 				    ?>
-					<img src="<?= $img[0]; ?>" class="og-image" />
+					<img src="<?= htmlentities($img[0], ENT_QUOTES, 'UTF-8'); ?>" class="og-image" />
 				<?php 
 				    
 				}?>
-				<h3><a href="<?= $ogp['og:url']; ?>"><?= $ogp['og:title']; ?></a></h3>
-				<?= $ogp['og:description']; ?>
+				<h3><a href="<?= htmlentities($ogp['og:url'], ENT_QUOTES, 'UTF-8'); ?>"><?= htmlentities($ogp['og:title'], ENT_QUOTES, 'UTF-8'); ?></a></h3>
+				<?= htmlentities($ogp['og:description'], ENT_QUOTES, 'UTF-8'); ?>
 		
 		</div>
 		
