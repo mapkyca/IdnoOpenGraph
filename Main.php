@@ -15,11 +15,15 @@ namespace IdnoPlugins\IdnoOpenGraph {
 	    // TODO: Cache url data to avoid repeating...
 	    // TODO: Pull image to local cached copy
 
-	    if ($raw = file_get_contents($url)) {
+	    try {
+		if ($raw = \Idno\Core\Webservice::file_get_contents($url)) {
 
-		if ($data = \ogp\Parser::parse($raw)) {
-		    return $data;
+		    if ($data = \ogp\Parser::parse($raw)) {
+			return $data;
+		    }
 		}
+	    } catch (\Exception $e) {
+		\Idno\Core\Idno::site()->logging()->error($e->getMessage());
 	    }
 
 	    return false;
