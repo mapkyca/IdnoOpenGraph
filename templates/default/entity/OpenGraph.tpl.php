@@ -17,8 +17,13 @@
 				<?php 
 				    
 				}?>
-				<h3><a href="<?= htmlentities($ogp['og:url'], ENT_QUOTES, 'UTF-8'); ?>"><?= htmlentities($ogp['og:title'], ENT_QUOTES, 'UTF-8'); ?></a></h3>
-				<?= htmlentities($ogp['og:description'], ENT_QUOTES, 'UTF-8'); ?>
+				<?php
+				if (!empty($ogp['og:url']) && !empty($ogp['og:title'])) {
+				    ?><h3><a href="<?= htmlentities($ogp['og:url'], ENT_QUOTES, 'UTF-8'); ?>"><?= htmlentities($ogp['og:title'], ENT_QUOTES, 'UTF-8'); ?></a></h3>
+				<?php } ?>
+				<?php if (!empty($ogp['og:description'])) { 
+				    echo htmlentities($ogp['og:description'], ENT_QUOTES, 'UTF-8'); 
+				} ?>
 		
 		</div>
 		
